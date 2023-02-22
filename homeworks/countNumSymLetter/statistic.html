@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the second task (1)
+		let numbers = "1234567890";
+		let symbols = "!@#$%^&*()";
+		let letters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+		let numbersCounter = 0;
+		let symbolsCounter = 0;
+		let lettersCounter = 0;
+		let simpleString = "I21 write 35some symbols12 for!!# checking how@4 this$@$ function works. Is it works, right?";
+		function letsDoStats(){
+			for (let counter = 0; counter < simpleString.length; counter++){
+				if (numbers.indexOf(simpleString[counter]) !== -1){
+					numbersCounter++;
+				}
+				if (symbols.indexOf(simpleString[counter]) !== -1){
+					symbolsCounter++;
+				}
+				if (letters.indexOf(simpleString[counter]) !== -1){
+					lettersCounter++;
+				}
+			}
+		return numbersCounter;
+		return symbolsCounter;
+		return lettersCounter;
+		}
+		letsDoStats(numbers, symbols, letters, lettersCounter, symbolsCounter, numbersCounter);
+		alert("In this string " + lettersCounter + " letters " + symbolsCounter + " symbols " + numbersCounter + " numbers.");
+	</script>
+</body>
+</html>
