@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: gainsboro;
+		}
+	   header{
+     	 width: auto;
+		 height: 250 px;
+		 background-color: #2f3984;
+		 color: white;
+		 padding-top: 20px; 
+		 padding-bottom: 20px;
+		 display: inline-block;
+      }
+        .namePage{
+            float: left;
+			padding-left: 150px;
+			text-align: left;
+			width: 1000px;
+			font-size: 30px;
+        }
+        
+        .menu{
+            float: right;
+            text-align: right;
+			padding-right: 150px;
+			font-size: 15px;
+			width: 100%;
+        }
+		
+		.choise{
+			padding-left: 150px;
+			padding-top: 20px;
+		}
+		
+		ul{
+            list-style: none;
+            padding-left: 150px;
+			padding-bottom: 20px;
+        }
+		
+		.btnSearch{
+			background: #2f3984;
+			color: white;
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+		}
+		
+		rangeCost {
+			display:block;
+		}		
+		
+		.leftBlock{
+			background-color: white;
+			border: 3px solid;
+			border-color: ghostwhite;
+			border-radius: 10px;
+			padding: 30px 30px 30px 30px;
+			width: 400px;
+		}
+		.rightBlock{
+			background-color: white;
+			border: 3px solid;
+			border-color: ghostwhite;
+			border-radius: 10px;
+			padding: 30px 30px 30px 30px;
+			width: 600px;
+		}
+		th{
+			border-bottom: 2px solid; 
+			border-bottom-color: #ada8a8;
+			border-top: 2px solid;
+			border-top-color: #ada8a8;
+		}
+		td{
+			border-bottom: 2px solid; 
+			border-bottom-color: #ada8a8;
+		}
+	</style>
+</head>
+<body>
+ 	 <header>
+		<div class = "namePage">Flights - Search List</div>
+		<div class = "menu">Home/Flights Search List</div>
+      </header>
+      <div class = "choise">
+      	<label for="choise1">One Way
+        	<input type="radio" value="oneWay" id="choise1" name="choiseBtn"></label>
+            <label for="choise2">Round Trip
+            <input type="radio" value="roudTrip" id="choise2" name="choiseBtn">
+            </label>
+      </div>
+      <div class = "data">
+      	<ul>
+            <li>
+                <input type="text" id="from" name="userFrom" placeholder="From">
+                <input type="text" id="to" name="userTo" placeholder="To">
+                <input type="text" id="depart" name="userDepart" placeholder="Depart Date">
+                <input type="text" id="return" name="userReturn" placeholder="Return Date">
+                <select name="gender" id="gender">
+                    <option>Economy Class</option>
+                    <option>First Class</option>
+                    <option>Business Class</option>
+                </select>
+                <input type="button" class="btnSearch" value="Search">
+            </li>
+		  </ul>
+      </div>
+      <div class = "leftBlock" style="float: left;">
+      	<div style = "font-size: 30px;"><b>Filter</b></div>
+      	<div style="color: #2f3984; margin-top: 10px;"><b>No. of Stops</b></div>
+      	<div id = "stops">
+     		 <div style="margin-top: 5px;">
+				 <input type="checkbox" id="non" name="Non" unchecked>
+				 <label for="non">Non Stop</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="one" name="One" unchecked>
+				 <label for="one">1 Stop</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="two" name="Two" unchecked>
+				 <label for="two">2+ Stops</label>
+      		 </div>
+      	</div>
+      	<div style="color: #2f3984; margin-top: 10px;"><b>Price</b></div>
+      	<div id = "rangeCost">
+      		<div style="float: left; margin-right: 20px; margin-top: 10px;">
+      			<label for="min">Min:<br></label>
+      			<input type="number" id="min" name="userMin" placeholder="0"> $ - 
+      		</div>
+      		<div style="float:left; margin-top: 10px;">
+      			<label for="min">Max:<br></label>
+      			<input type="number" id="max" name="userMax" placeholder="1000"> $
+      		</div>
+      		<br style="clear:both;" />
+      	</div>
+		  <div style="color: #2f3984; margin-top: 10px;"><b>Airlines</b></div>
+      		<div style="margin-top: 5px;">
+				 <input type="checkbox" id="asia" name="Asia" unchecked>
+				 <label for="asia">Asiana Airlines</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="america" name="USA" unchecked>
+				 <label for="america">American Airlines</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="canada" name="Canada" unchecked>
+				 <label for="canada">Air Canada</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="india" name="India" unchecked>
+				 <label for="india">Air India</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="jet" name="Jet" unchecked>
+				 <label for="jet">Jet Airways</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="spice" name="Spice" unchecked>
+				 <label for="canada">Spicejet</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="go" name="Go" unchecked>
+				 <label for="go">IndiGo</label>
+      		 </div>
+      		 <div>
+				 <input type="checkbox" id="mult" name="Mult" unchecked>
+				 <label for="mult">Multiple Airlines</label>
+      		 </div>
+      </div>
+      <div class = "rightBlock" style = "float: left; margin-left: 20px;">
+      	<div style = "font-size: 30px; text-align: center; padding-bottom: 20px;"><b>Delhi to Sidney</b></div>
+      	<table class="default" border="0" cellpadding="3" cellspacing="0">
+			<tbody>
+			  <tr style = "background:gainsboro; color: #2f3984;">
+				<th style="width: 120px;">
+				  Airlines
+				</th>
+				<th style="width: 120px;">
+				  Departure
+				</th>
+				<th>
+				  Duration
+				</th>
+				<th style="width: 120px;">
+				  Arrival
+				</th>
+				<th style="width: 120px;">
+				  Price
+				</th>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			   <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  IndiGo
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">6E-2489</span>
+				</td>
+				<td style="text-align: center;">
+			  	  23:40
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Dehli</span>
+				</td>
+				<td style="text-align: center;">
+					18h 55m
+					<br>
+					<span style="color: #bfbdbd; font-size: 12px;">Non Stop</span>
+				</td>
+				<td style="text-align: center;">
+				  18:15
+				  <br>
+				  <span style="color: #bfbdbd; font-size: 12px;">Sydney</span>
+				</td>
+				<td style="text-align: center;">
+			      980$
+				</td>
+				<td style="color: #2f3984; font-size: 13px; text-align: center;">
+				  <input type="button" class="btnSearch" value="Book">
+				  <br>
+				  Flight Details
+				</td>
+			  </tr>
+			</tbody>
+  		</table>
+      	
+      </div>
+</body>
+</html>
