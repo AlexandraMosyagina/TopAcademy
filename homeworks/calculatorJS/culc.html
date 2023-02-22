@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the third task (6)
+		var continueAgain;
+		do {
+			var firstCulcNumber = prompt("Please, enter the first number!");
+			var secondCulcNumber = prompt("Please, enter the second number!");
+			var symbol = prompt("Please, enter the symbol!");
+			var result = 0;
+			firstCulcNumber = Number(firstCulcNumber);
+			secondCulcNumber = Number(secondCulcNumber);
+			switch(symbol){
+				case '+':
+					result = firstCulcNumber + secondCulcNumber;
+					alert("Done! This is your result: " + result);
+				break;
+				case '-':
+					result = firstCulcNumber - secondCulcNumber;
+					alert("Done! This is your result: " + result);
+				break;
+				case '*':
+					result = firstCulcNumber * secondCulcNumber;
+					alert("Done! This is your result: " + result);
+				break;
+				case '/':
+					result = firstCulcNumber / secondCulcNumber;
+					alert("Done! This is your result: " + result);
+				break;
+			}
+		} while (continueAgain = confirm("Do you want count something else?") !== false);
+	</script>
+</body>
+</html>
