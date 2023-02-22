@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the third task (5)
+		let stringSample = "Fear of missing out";
+		let abbreviation = "";
+		let counterWords = 0;
+		stringSample = stringSample.split(" ");
+		function stringToAbbreviation(){
+			for (counterWords; counterWords < stringSample.length; counterWords++){
+				abbreviation += stringSample[counterWords].substr(0, 1);
+			}
+		abbreviation = abbreviation.toUpperCase();
+		return abbreviation;
+		}
+		stringToAbbreviation(stringSample, abbreviation, counterWords);
+		alert(abbreviation);
+	</script>
+</body>
+</html>
