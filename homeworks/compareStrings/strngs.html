@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the first task (1)
+		let firstString = "Merry Cristmas!";
+		let secondString = "Hello";
+		let lengthFirst = firstString.length;
+		alert(lengthFirst);
+		let lengthSecond = secondString.length;
+		alert(lengthSecond);
+		function lessString(){
+			if (lengthFirst < lengthSecond){
+				return -1;
+				alert("-1");
+			}
+			else if (lengthFirst > lengthSecond){
+				return 1;
+				alert("1");
+			}
+			else (lengthFirst = lengthSecond){
+				return 0;
+				alert("0");
+			}
+		}
+		lessString (lengthFirst, lengthSecond);
+	</script>
+</body>
+</html>
