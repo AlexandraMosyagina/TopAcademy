@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the first task (2)
+		function numberToText (number) {
+		  let ones = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
+		  let tensOne = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семнадцать', 'Восемнадцать', 'Девятнадцать', 'Двадвать'];
+		  let tensTwo = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
+		  if (number > 0 && number <= 9){
+			return ones[number - 1];
+		  }
+		  if (number >= 10 && number <= 20){
+			return tensOne[number - 10];
+		  }
+		  if (number > 20 && number <= 99){
+			let str = `${number}`;
+			str = str.split('');
+			let firstNumber = str[0];
+			let secondNumber = str[1];
+			return `${tensTwo[firstNumber - 2]} ${ones[secondNumber - 1]}`;
+		  }
+		}
+		alert(numberToText(22));
+		alert(numberToText(4));
+		alert(numberToText(16));
+	</script>
+</body>
+</html>
