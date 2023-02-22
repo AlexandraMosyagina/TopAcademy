@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//the fourth task (4)
+		let width = 5;
+		let height = 10;
+		let perimeter = 0;
+		function perimeterCalculate(){
+			if (width == null){
+				perimeter = height * 4;
+				alert("The perimeter of your square is " + perimeter);
+				return perimeter;
+			}
+			else if(height == null){
+				perimeter = width * 4;
+				alert("The perimeter of your square is " + perimeter);
+				return perimeter;
+			}
+			else{
+				perimeter = width * height;
+				alert("The perimeter of your rectangel is " + perimeter);
+				return perimeter;
+			}
+		}
+		perimeterCalculate(width, height, perimeter);
+	</script>
+</body>
+</html>
