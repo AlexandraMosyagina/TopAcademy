@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact form</title>
+    <style>
+		body{
+			background-image: url("https://aduvan.ru/wp-content/uploads/photo-gallery/sky-texturs/sky-texture_(14).jpg");
+			color: white;
+		}
+    	ul{
+    		list-style: none;
+        	padding: 10px;
+        	margin: 0;
+        	}
+	 	form{
+			margin-top: 50px;
+			margin-left: 150px;
+         	width: 700px;
+         	padding: 40px;
+         	border: 1px solid rgba(0, 0, 0, 0.3);
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+		input[id="send"]{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-image: url("https://aduvan.ru/wp-content/uploads/photo-gallery/sky-texturs/sky-texture_(14).jpg"); 
+			color: white;
+			border: 2px solid #fff;
+        }
+		 label{
+            width: 200px;
+            text-align: right;
+            display: inline-block;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+ <form action="/" method="post">
+	 <h1>Contact form</h1><br>
+	 Please fill in your information and we'll be sanding your order.<br><br><br>
+        <ul>
+            <li>
+                <label for="firstName">Your name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last name">
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="userEmail">
+			</li>
+            <li>
+                <label for="phone">Phone*</label>
+                <input type="text" id="phone" name="userPhone" >               
+            </li>
+            <li>
+				<label for="subject">Message subject*</label>
+                <select name="subject" id="subject">
+                    <option>other</option>
+                    <option>order</option>
+                    <option>time</option>
+                </select>
+            </li>
+			 <li>
+                <label for="message">Message*</label>
+                <textarea name="userMessage" id="message"></textarea>
+            </li>
+			<hr>
+            <li>
+                <input type="submit" id="send" value="SUBMIT FORM">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
