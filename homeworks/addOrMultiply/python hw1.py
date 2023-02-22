@@ -1,4 +1,4 @@
-"""This is a first homework on Python."""
+"""This is a first homework on Python"""
 # the first task
 firstNumber = int(input("Enter a first number"))
 secondNumber = int(input("Enter a second number"))
