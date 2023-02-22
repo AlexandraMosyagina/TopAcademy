@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the fourth task (3)
+		let stringForChange = "ThIS 3123 iS STRING 543.";
+		let magicCounter = 0;
+		function letsDoSomeMagic(change){
+  			let magic = change.toUpperCase().split("");
+  			for (magicCounter; magicCounter < stringForChange.length; magicCounter++){
+    			if (magic[magicCounter] === change[magicCounter]){
+      				magic[magicCounter] = magic[magicCounter].toLowerCase();
+  				}
+				else if(numbers.includes(stringForChange[magicCounter])){
+      				magic.push(stringForChange[magicCounter].replace("_"));
+    			}
+			}
+  			return magic.join("");
+		}
+		letsDoSomeMagic(stringForChange, magicCounter);
+		alert(stringForChange);
+	</script>
+</body>
+</html>
