@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the fifth task
+		let continueAgain;
+		let sumStrings = "";
+		function letsJoinStrings() {
+  			do {
+    			let enterString = prompt("Please, enter the string!");
+    			sumStrings += enterString;
+  			} while (continueAgain = confirm("Do you want add another string?") !== false);
+  		return sumStrings;
+		}
+		letsJoinStrings();
+		alert(sumStrings);
+	</script>
+</body>
+</html>
