@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//the second task (4)
+		var userNumber = prompt("Please, enter your number!");
+		userNumber = Number(userNumber);
+		var checker = 0;
+		while (userNumber > 1){
+			userNumber = userNumber/10;
+			checker++;
+		}
+		alert("The length of your number is " + checker)
+	</script>
+</body>
+</html>
