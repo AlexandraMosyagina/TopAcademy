@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.modal{
+			display: none;
+			background-color: azure;
+			width: 600px;
+			height: 170px;
+			margin-top: 150px;
+			margin-left: auto;
+			margin-right: auto;
+			position: fixed;
+			border: 3px solid;
+			border-image: linear-gradient(20deg, #f92056 38%, #00deff 65%);
+			border-image-slice: 1;
+		}
+		
+		.content{
+			padding: 20px;
+			margin-left: center;
+			margin-right: center;
+		}
+		
+		.open{
+			padding: 20px;
+			letter-spacing: 0.2em;
+			border: 1px solid;
+			border-image: linear-gradient(20deg, #f92056 38%, #00deff 65%);
+			border-image-slice: 1;
+		}
+		.close{
+			 background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			display: inline-block;
+			padding: 0.3em 0.6em ;
+			border: 3px solid transparent;
+			border-image: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+			border-image-slice: 1;
+		}
+	</style>
+</head>
+<body>
+	<button id = "openWindow" class = "open">Open modal</button>
+	<div id = "modalWindow" class = "modal">
+		<div class = "content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus autem, unde vitae dolor, sapiente voluptates numquam optio at, ea placeat tempore cum iure iusto sequi provident quam labore, asperiores necessitatibus!</p>
+			<button id = "closeWindow" class = "close">Close modal</button>
+		</div>
+	</div>
+	<script>
+		//get elements
+		var modal = document.getElementById("modalWindow");
+		var btnOpen = document.getElementById("openWindow");
+		var btnClose = document.getElementById("closeWindow");
+		
+		//click for open
+		btnOpen.onclick = function(){
+			modal.style.display = "block";
+		}
+		
+		//click for close
+		btnClose.onclick = function(){
+			modal.style.display = "none";
+		}
+	</script>
+</body>
+</html>
